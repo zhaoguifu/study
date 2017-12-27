@@ -11,3 +11,4 @@
 需要针对关键字进行分析，然后根据情况安装排到网站里面。
 Git is a distributed version control system.
 Git is free software distributed under the GPL.
+Git has a mutable index called stage.
