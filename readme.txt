@@ -12,3 +12,6 @@
 Git is a distributed version control system.
 Git is free software distributed under the GPL.
 Git has a mutable index called stage.
+
+
+新学习了分支，然后进行修改，再提交。。。
