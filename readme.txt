@@ -21,3 +21,4 @@ Creating a new branch is quick & simple.
 解决冲突的问题。
 >>>>>>> feature1
 Creating a new branch is quick and simple.
+这个文件需要再一次被修改
