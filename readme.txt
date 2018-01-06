@@ -15,4 +15,9 @@ Git has a mutable index called stage.
 
 
 新学习了分支，然后进行修改，再提交。。。
+<<<<<<< HEAD
 Creating a new branch is quick & simple.
+=======
+解决冲突的问题。
+>>>>>>> feature1
+Creating a new branch is quick and simple.
