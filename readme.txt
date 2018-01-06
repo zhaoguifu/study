@@ -15,3 +15,4 @@ Git has a mutable index called stage.
 
 
 新学习了分支，然后进行修改，再提交。。。
+解决冲突的问题。
