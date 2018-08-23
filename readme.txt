@@ -22,3 +22,6 @@ Creating a new branch is quick & simple.
 >>>>>>> feature1
 Creating a new branch is quick and simple.
 这个文件需要再一次被修改
+\
+
+sdf
