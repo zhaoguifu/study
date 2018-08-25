@@ -1,0 +1,85 @@
+{
+  "name": "Koala",
+  "main": "app/main.html",
+  "description": "Koala is a developer tool for LESS, Sass and CoffeeScript compilation.",
+  "version": "2.3.0",
+  "keywords": [
+    "less",
+    "sass",
+    "coffeescript",
+    "dust",
+    "compiler"
+  ],
+  "homepage": "http://koala-app.com",
+  "bugs": {
+    "url": "https://github.com/oklai/koala/issues"
+  },
+  "maintainers": {
+    "name": "Ethan Lai",
+    "email": "lain.z.q@gmail.com",
+    "web": "http://oklai.name?from=koala",
+    "project": "http://koala-app.com",
+    "issues": "https://github.com/oklai/koala/issues",
+    "docs": "https://github.com/oklai/koala/wiki",
+    "faq": "https://github.com/oklai/koala/wiki/FAQ",
+    "upgrade": "http://koala-app.com/upgrade/upgrade.json",
+    "locales_repositories": "http://koala-app.com/upgrade/locales_repositories.json",
+    "compilers_repositories": "http://koala-app.com/upgrade/compilers_repositories.json"
+  },
+  "contributors": [
+    {
+      "name": "Max Deng",
+      "web": "http://weibo.com/cooldz"
+    },
+    {
+      "name": "Leott Liu",
+      "web": "http://t.qq.com/se7en860313"
+    },
+    {
+      "name": "Ziad El Khoury Hanna",
+      "web": "https://github.com/zaygraveyard"
+    }
+  ],
+  "window": {
+    "debug": false,
+    "icon": "app/assets/img/koala.png",
+    "icon-mac": "app/assets/img/koala.tiff",
+    "toolbar": false,
+    "width": 900,
+    "height": 556,
+    "resizable": true,
+    "position": "center",
+    "frame": true,
+    "show": false
+  },
+  "platformOverrides": {
+    "win": {
+      "window": {
+        "frame": false
+      }
+    }
+  },
+  "dependencies": {
+    "adm-zip": "0.4.7",
+    "autoprefixer": "^7.1.6",
+    "clean-css": "^4.1.9",
+    "coffee-script": "^1.12.7",
+    "eventproxy": "0.2.5",
+    "fs-extra": "0.6.1",
+    "jade": "0.27.7",
+    "less": "^1.7.5",
+    "postcss": "^6.0.14",
+    "uglify-es": "^3.1.9",
+    "uglify-js": "^3.1.9"
+  },
+  "licenses": [
+    {
+      "type": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oklai/koala.git"
+  }
+}

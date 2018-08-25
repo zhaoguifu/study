@@ -1,0 +1,17 @@
+{
+	"languageName": "正體中文",
+
+	"languageCode": "zh_tw",
+
+	"version": "1.0.0",
+
+	"translator": {
+		"name": "香腸",
+		"email": "s9011514@gmail.com",
+    	"web": "http://sofree.cc"
+	},
+
+	"koalaVersion": ">=2.0.0",
+
+	"updatedDate": "2013-08-07"
+}

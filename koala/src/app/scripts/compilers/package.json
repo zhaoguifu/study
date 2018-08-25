@@ -1,0 +1,464 @@
+// Built-in Compilers Package
+[
+	// LESS Compiler
+	{
+		"name": "less",
+
+		"display": "LESS",
+
+		"version": "1.0.1",
+
+		"koalaVersion": ">=2.0.0",
+
+		"main": "LessCompiler.js",
+
+		"contributors": [
+			{"name": "Ziad El Khoury Hanna","web": "https://github.com/zaygraveyard"}
+		],
+
+		"fileTypes": [{
+			"extension": "less",
+			"output": "css",
+			"icon": "../../assets/img/filetypes/less.png",
+			"category": "style"
+		}],
+
+		// File Options
+		"options": [
+			{
+				"type": "checkbox",
+				"name": "sourceMap",
+				"display": "Source Map",
+				"default": false
+			},
+			{
+				"type": "checkbox",
+				"name": "lineComments",
+				"display": "Line Comments",
+				"default": false
+			},
+			{
+				"type": "checkbox",
+				"name": "debugInfo",
+				"display": "Debug Info",
+				"default": false
+			},
+			{
+				"type": "checkbox",
+				"name": "strictMath",
+				"display": "Strict Math",
+				"default": false
+			},
+			{
+				"type": "checkbox",
+				"name": "strictUnits",
+				"display": "Strict Units",
+				"default": false
+			},
+			{
+				"type": "checkbox",
+				"name": "autoprefix",
+				"display": "Autoprefix",
+				"default": false
+			},
+			{
+				"type": "text",
+				"name": "autoprefixConfig",
+				"display": "Autoprefix Config",
+				"default": "",
+				"placeholder": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
+				"depend": "autoprefix"
+			},
+			{
+				"type": "droplist",
+				"name": "outputStyle",
+				"display": "Output Style",
+				"items": [
+					{
+						"value": "",
+						"text": "normal"
+					},
+					{
+						"value": "compress",
+						"text": "compress"
+					}
+				],
+				"default": ""
+			}
+		],
+
+		// Advanced Options
+		"advanced": [
+			{
+				"type": "checkbox",
+				"name": "useCommand",
+				"display": "Use the System LESS compiler",
+				"default": false
+			},
+			{
+				"type": "text",
+				"name": "commandPath",
+				"display": "Use the LESS executable at this path",
+				"default": "",
+				"placeholder": "Default: lessc",
+				"depend": "useCommand"
+			}
+		],
+
+		// project settings file path
+		"projectSettings": "../../settings/koala-config-of-less.json",
+
+		"libraries": ["LESS@1.7.5"]
+	},
+
+	// Sass Compiler
+	{
+		"name": "sass",
+
+		"display": "Sass",
+
+		"version": "1.0.1",
+
+		"koalaVersion": ">=2.0.0",
+
+		"main": "SassCompiler.js",
+
+		"fileTypes": [
+			{
+				"extension": "sass",
+				"output": "css",
+				"icon": "../../assets/img/filetypes/sass.png",
+				"category": "style"
+			},
+			{
+				"extension": "scss",
+				"output": "css",
+				"icon": "../../assets/img/filetypes/scss.png",
+				"category": "style"
+			}
+		],
+
+		"options": [
+			{
+				"type": "checkbox",
+				"name": "compass",
+				"display": "Compass Mode",
+				"default": false
+			},
+			{
+				"type": "checkbox",
+				"name": "sourceMap",
+				"display": "Source Map",
+				"default": true
+			},
+			{
+				"type": "checkbox",
+				"name": "lineComments",
+				"display": "Line Comments",
+				"default": false
+			},
+			{
+				"type": "checkbox",
+				"name": "debugInfo",
+				"display": "Debug Info",
+				"default": false
+			},
+			{
+				"type": "checkbox",
+				"name": "unixNewlines",
+				"display": "Unix New Lines",
+				"default": false
+			},
+			{
+				"type": "checkbox",
+				"name": "autoprefix",
+				"display": "Autoprefix",
+				"default": false
+			},
+			{
+				"type": "text",
+				"name": "autoprefixConfig",
+				"display": "Autoprefix Config",
+				"default": "",
+				"placeholder": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
+				"depend": "autoprefix"
+			},
+			{
+				"type": "droplist",
+				"name": "outputStyle",
+				"display": "Output Style",
+				"items": [
+					{
+						"value": "nested",
+						"text": "nested"
+					},
+					{
+						"value": "expanded",
+						"text": "expanded"
+					},
+					{
+						"value": "compact",
+						"text": "compact"
+					},
+					{
+						"value": "compressed",
+						"text": "compressed"
+					}
+				],
+				"default": "nested"
+			}
+		],
+
+		// Advanced Options
+		"advanced": [
+			{
+				"type": "checkbox",
+				"name": "useSassCommand",
+				"display": "Use the System Sass compiler",
+				"default": false
+			},
+			{
+				"type": "text",
+				"name": "sassCommandPath",
+				"display": "Use the Sass executable at this path",
+				"default": "",
+				"placeholder": "Default: sass",
+				"depend": "useSassCommand"
+			}
+		],
+
+		"projectSettings": "../../settings/koala-config-of-sass.json",
+
+		"libraries": ["Sass@3.4.23"]
+	},
+
+	// compass test
+	{
+		"name": "compass",
+
+		"display": "Compass",
+
+		"version": "1.0.0",
+
+		"koalaVersion": ">=2.0.0",
+
+		"fileTypes": [],
+
+		"options": [
+			{
+				"type": "description",
+				"display": "compass project configuration instructions"
+			}
+		],
+
+		// Advanced Options
+		"advanced": [
+			{
+				"type": "checkbox",
+				"name": "useCompassCommand",
+				"display": "Use the System Compass compiler",
+				"default": false
+			},
+			{
+				"type": "text",
+				"name": "compassCommandPath",
+				"display": "Use the Compass executable at this path",
+				"default": "",
+				"placeholder": "Default: compass",
+				"depend": "useCompassCommand"
+			}
+		],
+
+		"libraries": ["Compass@1.0.3"]
+	},
+
+	// CoffeeScript Compiler
+	{
+		"name": "coffee",
+
+		"display": "CoffeeScript",
+
+		"version": "1.0.0",
+
+		"koalaVersion": ">=2.0.0",
+
+		"main": "CoffeeScriptCompiler.js",
+
+		"fileTypes": [{
+			"extension": "coffee",
+			"output": "js",
+			"icon": "../../assets/img/filetypes/coffee.png",
+			"category": "script"
+		}],
+
+		"options": [
+			{
+				"type": "checkbox",
+				"name": "sourceMap",
+				"display": "Source Map",
+				"default": false
+			},
+			{
+				"type": "checkbox",
+				"name": "bare",
+				"display": "Bare",
+				"default": false
+			},
+			{
+				"type": "checkbox",
+				"name": "literate",
+				"display": "Literate",
+				"default": false
+			}
+		],
+
+		// Advanced Options
+		"advanced": [
+			{
+				"type": "checkbox",
+				"name": "useCommand",
+				"display": "Use the System CoffeeScript compiler",
+				"default": false
+			},
+			{
+				"type": "text",
+				"name": "commandPath",
+				"display": "Use the CoffeeScript executable at this path",
+				"default": "",
+				"placeholder": "Default: coffee",
+				"depend": "useCommand"
+			}
+		],
+
+		"projectSettings": "../../settings/koala-config-of-coffee.json",
+
+		"libraries": ["CoffeeScript@1.12.5"]
+	},
+	{
+		"name": "uglifyjs",
+
+		"display": "JavaScript",
+
+		"version": "1.0.1",
+
+		"koalaVersion": ">=2.0.0",
+
+		"main": "UglifyJSCompiler.js",
+
+		"maintainer": {
+			"name": "Ziad El Khoury Hanna",
+			"email": "",
+			"web": "https://github.com/zaygraveyard",
+			"project": "http://github.com/oklai/koala"
+		},
+
+		"fileTypes": [{
+			"extension": "js",
+			"output": "js",
+			"icon": "../../assets/img/filetypes/js.png",
+			"category": "javascript",
+			"autocompile": false
+		}],
+
+		"options": [
+			{
+				"type": "checkbox",
+				"name": "compress",
+				"display": "Compress",
+				"default": true
+			},
+            {
+                "type": "checkbox",
+                "name": "comments",
+                "display": "Preserve copyright comments",
+                "default": false
+            },
+			{
+				"type": "checkbox",
+				"name": "harmony",
+				"display": "Harmony (ES6+)",
+				"default": false
+			}
+		],
+
+		"libraries": ["uglify-js@3.0.4"]
+	},
+
+
+	// CSS min Compiler
+	{
+		"name": "cssmin",
+
+		"display": "CSS",
+
+		"version": "1.0.0",
+
+		"koalaVersion": ">=1.5.0",
+
+		"main": "CssCompiler.js",
+
+		"maintainer": {
+			"name": "hahnzhu",
+			"email": "hahn.chu91@gmail.com",
+			"web": "https://github.com/hahnzhu",
+			"project": "http://github.com/oklai/koala"
+		},
+
+		"fileTypes": [{
+			"extension": "css",
+			"output": "css",
+			"icon": "../../assets/img/filetypes/css.png",
+			"category": "css",
+			"autocompile": false
+		}],
+
+		// File Options
+		"options": [
+			{
+				"type": "checkbox",
+				"name": "combineImport",
+				"display": "Combine Import",
+				"default": true
+			},
+			{
+				"type": "checkbox",
+				"name": "appendTimestamp",
+				"display": "Timestamp",
+				"default": false
+			},
+			{
+				"type": "checkbox",
+				"name": "autoprefix",
+				"display": "Autoprefix",
+				"default": false
+			},
+			{
+				"type": "text",
+				"name": "autoprefixConfig",
+				"display": "Autoprefix Config",
+				"default": "",
+				"placeholder": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
+				"depend": "autoprefix"
+			},
+			{
+				"type": "droplist",
+				"name": "outputStyle",
+				"display": "Output Style",
+				"items": [
+					{
+						"value": "compress",
+						"text": "compress"
+					},
+					{
+						"value": "yuicompress",
+						"text": "yuicompress"
+					}
+				],
+				"default": "yuicompress"
+			}
+		],
+
+		"libraries": ["clean-css@4.1.2"]
+	}
+
+]

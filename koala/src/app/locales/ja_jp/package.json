@@ -1,0 +1,17 @@
+{
+	"languageName": "日本語",
+
+	"languageCode": "ja_jp",
+
+	"version": "1.0.0",
+
+	"translator": {
+		"name": "Sou-Lab",
+		"email": "",
+    	"web": "http://sou-lab.com"
+	},
+
+	"koalaVersion": ">=2.0.0",
+	
+	"updatedDate": "2013-07-10"
+}

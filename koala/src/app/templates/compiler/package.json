@@ -1,0 +1,29 @@
+{
+	"name": "demo",
+
+	"display": "MyCompiler",
+
+	"version": "1.0.0",
+
+	"koalaVersion": ">=2.0.0",
+
+	"main": "MyCompiler.js",
+
+	"fileTypes": [{
+		"extension": "", 
+
+		"output": "",
+
+		"icon": "",
+
+		"category": ""
+	}],
+
+	"options": [],
+
+	"advanced": [],
+
+	"projectSettings": "",
+
+	"libraries": []
+}

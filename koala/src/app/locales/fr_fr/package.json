@@ -1,0 +1,17 @@
+{
+	"languageName": "Français",
+
+	"languageCode": "fr_fr",
+	
+	"version": "2.0.0",
+
+	"translator": {
+		"name": "Youcef Mammar",
+		"email": "y.mammar@gmail.com",
+    	"web": "ymammar.com"
+	}, 
+	
+	"koalaVersion": ">=2.0.0",
+
+	"updatedDate": "2013-08-20"
+}

@@ -1,0 +1,56 @@
+{
+	"languages": [
+		{
+			"name": "English", // The language name.
+			"code": "en_us"    // Language code. e.g "en_us".
+		},
+		{
+			"name": "简体中文",
+			"code": "zh_cn"
+		},
+		{
+			"name": "正體中文",
+			"code": "zh_tw"
+		},
+		{
+			"name": "日本語",
+			"code": "ja_jp"
+		},
+		{
+			"name": "Deutsch",
+			"code": "de_de"
+		},
+		{
+			"name": "Français",
+			"code": "fr_fr"
+		},
+		{
+			"name": "Português Brasileiro",
+			"code": "pt_br"
+		},
+		{
+			"name": "Spanish",
+			"code": "es_mx"
+		},
+		{
+			"name": "Русский",
+			"code": "ru_ru"
+		},
+		{
+			"name": "Italiano",
+			"code": "it_it"
+		},
+		{
+			"name": "Persian",
+			"code": "fa_IR"
+		},
+		{
+			"name": "Polish",
+			"code": "pl_pl"
+		},
+		{
+			"name": "Suomi",
+			"code": "fi_fi"
+		}
+	]
+}

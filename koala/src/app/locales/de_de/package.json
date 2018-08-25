@@ -1,0 +1,14 @@
+{
+	"languageName": "Deutsch",
+	"languageCode": "de_de",
+	
+	"translator": {
+		"name": " Sebastian Klaus",
+		"email": "sebastian@klaus.com.au",
+		"web": "http://sebastian.klaus.com.au"
+	}, 
+	
+	"koalaVersion": ">=2.0.0",
+
+	"updatedDate": "2013-12-18"
+}

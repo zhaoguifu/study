@@ -1,0 +1,665 @@
+@import "reset.css";
+@import "koalaui.css";
+/* line 5, _util.less */
+.flexbox {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+}
+/* line 6, main.less */
+.hide {
+  display: none;
+}
+/* line 7, main.less */
+.icon {
+  background: url(../img/icons.png) no-repeat;
+}
+/* line 10, main.less */
+.textOverhide {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-indent: -999px;
+}
+/* line 17, main.less */
+body {
+  overflow: hidden;
+}
+/* line 22, main.less */
+#window {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+}
+/* line 31, main.less */
+#sidebar,
+#main,
+#extend {
+  height: 100%;
+  position: relative;
+}
+/* line 35, main.less */
+#sidebar {
+  width: 215px;
+  background-color: #e5f1f8;
+  position: relative;
+}
+/* line 40, main.less */
+#main {
+  -webkit-box-flex: 1;
+  background-color: #f5f5f5;
+  position: relative;
+  min-width: 350px;
+  padding-right: 5px;
+}
+/* line 49, main.less */
+#titlebar {
+  display: none;
+  height: 35px;
+  width: 100%;
+  line-height: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -webkit-linear-gradient(top, #44474a 0%, #36393c 100%);
+  color: #CCD6DE;
+}
+/* line 61, main.less */
+#titlebar .dragbar {
+  -webkit-app-region: drag;
+  width: -webkit-calc(100% - 75px);
+}
+/* line 65, main.less */
+#titlebar h1 {
+  font-size: 18px;
+  margin-left: 10px;
+  display: inline-block;
+}
+/* line 70, main.less */
+#titlebar h1 span {
+  color: #3b9cef;
+}
+/* line 73, main.less */
+#titlebar .subtitle {
+  display: inline-block;
+  margin-left: 10px;
+  color: #929BA2;
+}
+/* line 79, main.less */
+#titlebar .nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+/* line 85, main.less */
+#titlebar .nav span {
+  display: block;
+  width: 35px;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  text-indent: -999px;
+  position: relative;
+}
+/* line 94, main.less */
+#titlebar .nav span:hover {
+  color: #FFF;
+}
+/* line 99, main.less */
+#titlebar .nav .minimize::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -4px;
+  margin-top: -1px;
+  background-color: #CCD6DE;
+  width: 9px;
+  height: 2px;
+  content: "";
+}
+/* line 110, main.less */
+#titlebar .nav .close::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: -1px;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  content: "×";
+  text-indent: 0;
+}
+/* line 123, main.less */
+#titlebar .nav .minimize:hover {
+  background-color: #5a6064;
+}
+/* line 126, main.less */
+#titlebar .nav .close:hover {
+  background-color: #C73636;
+}
+/* line 133, main.less */
+.win32 #titlebar {
+  display: block;
+}
+/* line 134, main.less */
+.win32 #sidebar,
+.win32 #main,
+.win32 #extend {
+  height: -webkit-calc(100% - 35px);
+  top: 35px;
+}
+/* line 141, main.less */
+#menus {
+  display: -webkit-flex;
+  height: 56px;
+}
+/* line 144, main.less */
+#menus li {
+  -webkit-flex: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-indent: -999px;
+  box-shadow: -1px 0 0 #9db2bc, -2px 0 0 #79868c;
+  background: -webkit-linear-gradient(top, #8c9ca4 0%, #79868c 100%);
+  position: relative;
+}
+/* line 151, main.less */
+#menus li:hover {
+  background: -webkit-linear-gradient(top, #3eb3eb 0%, #1f93c9 100%);
+}
+/* line 155, main.less */
+#menus li:before {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -12px;
+  margin-top: -12px;
+  content: '';
+  background: url(../img/icons.png) no-repeat;
+}
+/* line 170, main.less */
+#menus #addDirectory:before {
+  background-position: -85px 0;
+}
+/* line 173, main.less */
+#menus #log:before {
+  background-position: -119px 0;
+}
+/* line 176, main.less */
+#menus #settings:before {
+  background-position: -153px 0;
+}
+/* line 182, main.less */
+#projects {
+  position: absolute;
+  top: 56px;
+  width: 100%;
+  overflow: auto;
+  bottom: 0;
+}
+/* line 190, main.less */
+#folders li {
+  height: 50px;
+  line-height: 50px;
+  padding-left: 51px;
+  padding-right: 34px;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 14px;
+}
+/* line 202, main.less */
+#folders li:before {
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: url(../img/icons.png) no-repeat;
+  background-position: -90px -41px;
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  margin-top: -15px;
+  content: '';
+}
+/* line 215, main.less */
+#folders li:not(.active):hover {
+  background-color: #DAE8F1;
+}
+/* line 219, main.less */
+#folders li.active {
+  background-color: #cedee9;
+  font-weight: bold;
+}
+/* line 223, main.less */
+#folders li.active:after {
+  display: block;
+  width: 20px;
+  height: 13px;
+  background: url(../img/icons.png) no-repeat;
+  background-position: -115px -51px;
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  margin-top: -7px;
+  content: '';
+}
+/* line 237, main.less */
+#folders .changeName {
+  width: 145px;
+  position: relative;
+  z-index: 1;
+  font-weight: normal !important;
+}
+/* line 246, main.less */
+#searchbar {
+  padding: 10px 20px;
+  position: relative;
+  overflow: hidden;
+}
+/* line 251, main.less */
+#searchbar .hr {
+  border-bottom: 1px dashed #e0e1e1;
+  position: absolute;
+  bottom: 0;
+  width: -webkit-calc(100% - 40px);
+}
+/* line 257, main.less */
+#searchbar #refresh {
+  display: inine-block;
+  height: 22px;
+  background: -webkit-linear-gradient(top, #73c232 0%, #5da029 100%);
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  color: #FFF;
+  text-shadow: 1px 1px 1px #5fa12d;
+  position: relative;
+  top: 2px;
+  text-indent: 18px;
+  padding-right: 8px;
+}
+/* line 271, main.less */
+#searchbar #refresh:after {
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  margin-top: -8px;
+  width: 14px;
+  height: 16px;
+  background: url(../img/icons.png) no-repeat;
+  background-position: -142px -49px;
+  content: '';
+}
+/* line 282, main.less */
+#searchbar #refresh:hover {
+  background: -webkit-linear-gradient(top, #73c232 0%, #357900 100%);
+}
+/* line 285, main.less */
+#searchbar #refresh:active {
+  top: 3px;
+}
+/* line 286, main.less */
+#searchbar #refresh.disable {
+  opacity: 0.5;
+  pointer-events: none;
+}
+/* line 293, main.less */
+#searchbar #searchform {
+  float: right;
+  width: 180px;
+  position: relative;
+}
+/* line 298, main.less */
+#searchbar #searchform input[type=text] {
+  width: 160px;
+  height: 25px;
+  border: 1px solid #d1d1d1;
+  border-radius: 20px;
+  padding: 0 10px;
+  outline: none;
+}
+/* line 307, main.less */
+#searchbar #searchform button {
+  display: block;
+  width: 17px;
+  height: 17px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-indent: -999px;
+  background: url(../img/icons.png) no-repeat;
+  background-position: -165px -49px;
+  border: none;
+  position: absolute;
+  right: 10px;
+  top: 4px;
+}
+/* line 323, main.less */
+#files {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: -webkit-calc(100% - 87px);
+}
+/* line 328, main.less */
+#filelist {
+  padding: 0 10px;
+}
+/* line 331, main.less */
+#filelist .file_item {
+  padding: 10px 0 10px 73px;
+  position: relative;
+  height: 53px;
+  border: 1px solid #f5f5f5;
+  opacity: 1;
+  -webkit-transition: opacity 250ms ease-out;
+}
+/* line 339, main.less */
+#filelist .file_item .icon {
+  width: 53px;
+  height: 53px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  overflow: hidden;
+}
+/* line 347, main.less */
+#filelist .file_item:hover {
+  background-color: #f1f2f3;
+  border-color: #e2e2e2;
+}
+/* line 351, main.less */
+#filelist .file_item.ui-selecting {
+  background-color: rgba(231, 237, 243, 0.5);
+  border-color: rgba(210, 219, 224, 0.5);
+}
+/* line 355, main.less */
+#filelist .file_item.selected,
+#filelist .file_item.ui-selected {
+  background-color: #e7edf3;
+  border-color: #d2dbe0;
+}
+/* line 361, main.less */
+#filelist .name,
+#filelist .output {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* line 366, main.less */
+#filelist .name {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+/* line 371, main.less */
+#filelist .output {
+  color: #999;
+  height: 20px;
+  line-height: 20px;
+  margin-top: 2px;
+}
+/* line 377, main.less */
+#filelist .changeOutput {
+  float: left;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: none;
+  background: url(../img/icons.png) no-repeat;
+  background-position: -192px -49px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-indent: -999px;
+  opacity: 0.5;
+  margin-right: 5px;
+  margin-top: 4px;
+  -webkit-transition: opacity 250ms;
+}
+/* line 391, main.less */
+#filelist .changeOutput:hover {
+  opacity: 1;
+}
+/* line 395, main.less */
+#filelist .file_item.disable img {
+  opacity: 0.25;
+}
+/* line 398, main.less */
+#filelist .file_item.disable .name {
+  color: #999;
+}
+/* line 402, main.less */
+#filelist .file_item.new {
+  opacity: 0;
+}
+/* line 408, main.less */
+#typeNav {
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  overflow: hidden;
+  background: -webkit-linear-gradient(top, #f5f5f5 0%, #efefef 100%);
+}
+/* line 416, main.less */
+#typeNav .hr {
+  border-top: 1px solid #dee2e5;
+  background-color: #FFF;
+  height: 1px;
+}
+/* line 422, main.less */
+#typeNav .nav {
+  padding: 0 20px;
+  position: relative;
+  top: 9px;
+  width: 645px;
+}
+/* line 428, main.less */
+#typeNav .nav li {
+  display: inline-block;
+  padding: 0 10px;
+  line-height: 18px;
+  height: 18px;
+  min-width: 20px;
+  text-align: center;
+  border: 1px solid transparent;
+}
+/* line 437, main.less */
+#typeNav .nav li.current {
+  box-shadow: inset 1px 1px 1px #c0c0c0, inset -1px -1px 1px #c0c0c0;
+  border: 1px solid #FFF;
+  border-radius: 5px;
+  background-color: #ececec;
+  color: #3b9cef;
+}
+/* line 448, main.less */
+#extend {
+  background-color: #575c60;
+  color: #FFF;
+  width: 0;
+  -webkit-transition: width 200ms ease-out;
+}
+/* line 454, main.less */
+#extend.show {
+  width: 200px;
+}
+/* line 457, main.less */
+#extend .inner {
+  width: 180px;
+  padding: 10px;
+  line-height: 22px;
+}
+/* line 464, main.less */
+#extend ::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 164, 172, 0.6);
+}
+/* line 465, main.less */
+#extend ::-webkit-scrollbar-thumb:hover {
+  background-color: #9ba4ac;
+}
+/* line 466, main.less */
+#extend ::-webkit-scrollbar:hover {
+  background-color: #c5c5c5;
+}
+/* line 468, main.less */
+#extend select,
+#extend label {
+  display: block;
+  margin: 5px 0;
+  line-height: 18px;
+}
+/* line 473, main.less */
+#extend select {
+  width: 100%;
+}
+/* line 474, main.less */
+#extend label {
+  position: relative;
+  text-transform: capitalize;
+}
+/* line 478, main.less */
+#extend label span {
+  display: block;
+  padding-left: 18px;
+}
+/* line 482, main.less */
+#extend label input {
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+/* line 488, main.less */
+#extend .type {
+  height: 22px;
+  position: relative;
+  margin-bottom: 5px;
+}
+/* line 492, main.less */
+#extend .type:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 20px;
+  content: attr(data-type);
+}
+/* line 501, main.less */
+#extend .targetName {
+  text-align: center;
+  color: #CCC;
+  margin-bottom: 10px;
+}
+/* line 506, main.less */
+#extend .title {
+  font-size: 14px;
+  line-height: 28px;
+}
+/* line 510, main.less */
+#extend .option_args {
+  margin-top: 10px;
+  min-height: 290px;
+  max-height: 330px;
+  overflow-y: auto;
+}
+/* line 516, main.less */
+#extend footer {
+  text-align: center;
+  margin-top: 30px;
+}
+/* line 520, main.less */
+#extend .compileManually {
+  border-radius: 12px;
+  padding: 0 14px;
+}
+/* line 523, main.less */
+#extend .compileManually:active {
+  position: relative;
+  top: 1px;
+}
+/* line 530, main.less */
+.win32 .option_args {
+  min-height: 300px !important;
+}
+/* line 535, main.less */
+#dragover-overlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.3);
+  background-image: url('../img/addfolder.png');
+}
+/* line 545, main.less */
+#dragover-overlay.show {
+  display: block;
+}
+/* line 549, main.less */
+.win32 #dragover-overlay {
+  top: 40px;
+  height: -webkit-calc(100% - 40px);
+}
+/* line 554, main.less */
+#addprojecttips {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  z-index: 1;
+}
+/* line 564, main.less */
+#addprojecttips p {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  font-size: 20px;
+}
+/* line 572, main.less */
+#addprojecttips .ico_forder {
+  display: block;
+  width: 64px;
+  height: 60px;
+  background: url('../img/addfolder.png') 0 -8px no-repeat;
+  background-size: 64px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -62px;
+  margin-left: -36px;
+}
+/* line 586, main.less */
+#frame {
+  width: 786px;
+  height: 486px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -393px;
+  margin-top: -243px;
+  box-shadow: 0 0 10px #555;
+  z-index: 12;
+  background-color: #FFF;
+}
+/* line 599, main.less */
+.win32 #frame {
+  width: 728px;
+  height: 450px;
+  margin-left: -364px;
+  margin-top: -210px;
+}
