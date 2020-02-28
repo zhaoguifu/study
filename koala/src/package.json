@@ -62,7 +62,7 @@
   "dependencies": {
     "adm-zip": "0.4.7",
     "autoprefixer": "^7.1.6",
-    "clean-css": "^4.1.9",
+    "clean-css": "^4.1.11",
     "coffee-script": "^1.12.7",
     "eventproxy": "0.2.5",
     "fs-extra": "0.6.1",
