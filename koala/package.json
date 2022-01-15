@@ -10,7 +10,7 @@
     "merge-stream": "^1.0.1",
     "nw-builder": "^3.5.1",
     "run-sequence": "^2.2.0",
-    "shelljs": "^0.7.8"
+    "shelljs": "^0.8.5"
   },
   "devDependencies": {},
   "repository": {
